@@ -167,3 +167,11 @@ app.get("/download", (req, res) => {
     });
   });
 });
+
+
+app.get("/debug", (req, res) => {
+  res.json({
+    cwd: process.cwd(),
+    files: fs.readdirSync(process.cwd())
+  });
+});
