@@ -5,4 +5,5 @@ services:
     buildCommand: |
       npm install
       python3 -m pip install yt-dlp
-    startCommand: node server.js
+    startCommand: |
+      export PATH="$PATH:/opt/render/.local/bin" && node server.js
