@@ -4,6 +4,6 @@ services:
     env: node
     buildCommand: |
       npm install
+      python3 -m pip install --upgrade pip
       python3 -m pip install yt-dlp
-    startCommand: |
-      export PATH="$PATH:/opt/render/.local/bin" && node server.js
+    startCommand: node server.js
